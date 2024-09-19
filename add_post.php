@@ -5,9 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $title = $_POST['title'];
 $content = $_POST['content'];
 
-// Escape user inputs for security to prevent SQL injection
-//$title = $mysqli->real_escape_string($title);
-//$content = $mysqli->real_escape_string($content);
 
 $query = "INSERT INTO posts (title, content) VALUES ('$title', '$content')";
 
@@ -18,8 +15,6 @@ if ($conn->query($query) === TRUE) {
 }
 
 }
-
-
 
 ?>
 
